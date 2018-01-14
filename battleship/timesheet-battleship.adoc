@@ -1,5 +1,6 @@
 == Time expenditure: battleship assignment
-*in cooperation with team Rinnhofer, Wallner*
+|*VIER- Die phantastischen Vier *
+|*Arneitz, Rinnhofer, Ruggenthaler, Wallner*
 
 [cols="1,1,1, 1,4", options="header"]
 .Time expenditure
@@ -10,54 +11,108 @@
 | Actual Hours
 | Description
 
-| Arneitzj15
-| 20.12.17
+| wallnerb15
+| 13.01.18
 | 2
+| 3
+| working on the mockups, finishing mockups (Proj. Version 1), working on the project-report
+
+| ruggenth15
+| 13.01.18
 | 1 1/2
-| implement protobuf, compile, no big challenge, field, ship, pos, cell, Battlefield
+| 3
+| working on the project-report, fixing some problems with the paths used for sound effects and images
 
-| Arneitzj15, Steinerm15
-| 21.12.17
-| 5
-| 2
-| implementing css, beautiful ship picture background, really awesome.
+| wallnerb15
+| 13.01.18
+| 1
+| 1
+| estimating effort needed, estimating costs, finishing project-report
 
-| Arneitzj15, Steinerm15
-| 27.12.17
-| 5
-| 5
-| implementing converters
+| arneitzj15
+| 13.01.18
+| 1
+| 1/2
+| discussing process with Thomas- how to implement the Multiplayer mode, which model/way fits best? Server/Client idea, server should create timestamps and client should furthermore check if given time is not extended, followed by a connection between server and client
+
+| rinnhofe15
+| 13.01.18
+| 1
+| 2 1/2
+| working with Jakob- doing some research on Stackoverflow, Github and other pages. Came up with the idea of using sockets. Creating concept where an enduser is able to join a room or leave a room, handled via portnumbers (start-> port is listening)
 
 | Arneitzj15
-| 27.12.17
+| 13.01.18
 | 1
-| 5
-| implemented save / load buttons (working with rinnhofer thomas)
-
-| Arneitzj15
-| 28.12.17
-| 5
-| 4
-| implemented slider (working with rinnhofer thomas)
-
-| Arneitzj15, Steinerm15
-| 29.12.17
-| 2
 | 1
-| refining css, make it look beautiful
+| while discussing we came up with a better idea und found some useful solutions for our multiplayer problem -> Socket IO (usually used for instant chat)
 
-|Arneitzj15
-|01.01.2018
-|4
-|3
-|implemented media player, starting with application, setCycleCount, beautiful guitar music
+| rinnhofe15
+| 13.01.18
+| 1/2
+| 1 1/2
+| using the whiteboard for visualize our ideas (construction and usage of sockets, how the connection between the server and the client should work, how the game should work)
 
-|Arneitzj15
-|01.01.2018
-|2
+|rinnhofe15
+|13.01.18
 |1
-|implementing alert Box to start before game. "Are you ready?"
+|1
+|exploring how socket io is working exactly. Exists of 2 Libraries, Server and Client. Useful extension from (web) playframework: Socket IO Server (waiting for clients, also has internet ports). Client Socket IO, via sbt, Socket Library available for Android -> perfect, because it’s written in Java and we can use it for our project
 
+|arneitzj15
+|14.01.18
+|1/2
+|2
+|tried to include socket io in our project, came up with a few problems which weren’t easy to solve (e.g. “no main class detected”), trying to import the needed dependencies, also came up with many problems
 
+|arneitzj15
+|14.01.18
+|1/2
+|2
+|fixing problems. Important steps: 1. Import project -> build sbt open, 2. Added library dependencies by lazy val battleship. Useful manual: PlayFramework (Git), cloned PlaySocket IO
+
+|rinnhofe15
+|14.01.18
+|1/2
+|1 1/2
+|using the whiteboard again for visualizing the newest ideas of how the game should work
+
+|arneitzj15
+|14.01.18
+|1
+|3
+|working on the CSS and jfx, added JOIN GAME Button, implementing the newest concept and added many additional screens and buttons
+
+|rinnhofe15
+|14.01.18
+|1/2
+|3
+|trying to fix many errors, including framework to our project is very difficult (maybe too difficult), especially combining the framework app with the battleship app, sbt is always making problems
+
+|rinnhofe15
+|14.01.18
+|1/2
+|1
+|searching for an alternative version of our framework. Came up with some Lightweight Library, which only contains the needed Socket IO Server and Client Implementation and no superfluous additional functions like the framework app. Found some useful implementation of the lightweight library -> netty-socket IO (mrniko on Git). Only need to create an instance -> start method -> server
+
+|arneitzj15
+|14.01.18
+|1/2
+|3
+|trying to implement different nice looking fonts from the web. Came up with some problems. Doing some research on stackoverflow. Download TTIF and embed in BattleshipFX start method, code written in css – file. should load custom font, font is not applied. After 3 hours of desperation and anger decided to not using some fancy font
+
+|rinnhofe15
+|14.01.18
+|1
+|1
+|doing some coding, config server, define getter & setter (name & message)
+
+|rinnhofe15
+|14.01.18
+|1/2
+|2
+|some major problems turned up, no response of the server when receiving requests via socket io. So I have to change the concept, now no need of OK Messages in the communication between server and client, response from now as as broadcast message (who did what)
+
+|===
 
 |===
