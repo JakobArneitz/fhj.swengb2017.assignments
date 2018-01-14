@@ -96,7 +96,7 @@ class BattleShipFxController extends Initializable {
   private def initGame(): Unit = {
     val game: BattleShipGame = createGame()
     init(game)
-    appendLog("NEW GAME")
+    // appendLog("NEW GAME")
   }
 
   private def createGame(): BattleShipGame = {

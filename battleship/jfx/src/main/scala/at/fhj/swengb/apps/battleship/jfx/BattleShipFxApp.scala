@@ -26,7 +26,7 @@ class BattleShipFxApp extends Application {
 
   /*doing the media player, mp3 in folder*/
 
-  val triedRoot = Try(FXMLLoader.load[Parent](getClass.getResource("/at/fhj/swengb/apps/battleship/jfx/startupScreen.fxml")))
+  val triedRoot = Try(FXMLLoader.load[Parent](getClass.getResource("/at/fhj/swengb/apps/battleship/jfx/editMode.fxml")))
 
 
 

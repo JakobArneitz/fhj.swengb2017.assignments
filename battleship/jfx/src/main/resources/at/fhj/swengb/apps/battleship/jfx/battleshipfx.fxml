@@ -9,86 +9,96 @@
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="background1" prefHeight="540.0" prefWidth="752.0" stylesheets="@button.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxController">
-    <right>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxController">
+   <children>
+      <BorderPane id="background1" layoutX="2.0" prefHeight="540.0" prefWidth="752.0" stylesheets="@button.css">
+          <right>
     </right>
-    <top>
-        <Label fx:id = "label" prefHeight="51.0" prefWidth="128.0" stylesheets = "button.css" style="-fx-background-color: none;" text="Battleship" BorderPane.alignment="CENTER">
-            <font>
-                <Font size="27.0" />
-            </font>
-         <effect>
-            <Lighting>
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant color="#dd4545" />
-               </light>
-            </Lighting>
-         </effect>
-        </Label>
-    </top>
-    <right>
-        <VBox id="background" prefHeight="420.0" prefWidth="138.0" spacing="5.0" BorderPane.alignment="CENTER">
-            <children>
+          <top>
+              <Label id="log" fx:id="label" prefHeight="51.0" prefWidth="128.0" stylesheets="button.css" text="Battleship" textFill="WHITE" BorderPane.alignment="CENTER">
+                  <font>
+                      <Font size="27.0" />
+                  </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#dd4545" />
+                     </light>
+                  </Lighting>
+               </effect>
+              </Label>
+          </top>
+          <right>
+              <VBox id="background" prefHeight="420.0" prefWidth="138.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </BorderPane.margin>
+              </VBox>
+          </right>
+          <center>
+              <GridPane fx:id="battleGroundGridPane" alignment="CENTER" hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints maxHeight="30.0" minHeight="28.5" prefHeight="28.5" vgrow="NEVER" />
+                      <RowConstraints maxHeight="31.5" minHeight="30.0" prefHeight="31.5" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  </rowConstraints>
+              </GridPane>
+          </center>
+         <left>
+              <TextArea id="log" fx:id="log" prefHeight="200.0" prefWidth="200.0" stylesheets="@button.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" top="70.0" />
+               </BorderPane.margin>
+            </TextArea>
+         </left>
+         <bottom>
+            <Slider fx:id="slider" max="100.0" onMouseDragged="#onMouseDragged" prefHeight="69.0" prefWidth="752.0" showTickLabels="true" value="0.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </BorderPane>
+      <HBox prefHeight="105.0" prefWidth="324.0">
+         <children>
                 <Button id="button" fx:id="button" onAction="#newGame" prefHeight="40.0" prefWidth="142.0" style="-fx-text-fill: white;" stylesheets="@button.css" text="New Game" textFill="#5c6f5f" />
             <Button id="button" fx:id="button1" onAction="#loadGame" prefHeight="40.0" prefWidth="142.0" style="-fx-text-fill: white;" stylesheets="@button.css" text="Load Game" textFill="#ab9203" />
-            <Button id="button" fx:id="button11" onAction="#saveGame" prefHeight="40.0" prefWidth="142.0" style="-fx-text-fill: white;" stylesheets="@button.css" text="Save Game" />
-            </children>
-         <BorderPane.margin>
-            <Insets left="20.0" right="20.0" />
-         </BorderPane.margin>
-        </VBox>
-    </right>
-    <center>
-        <GridPane fx:id="battleGroundGridPane" alignment="CENTER" hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints maxHeight="30.0" minHeight="28.5" prefHeight="28.5" vgrow="NEVER" />
-                <RowConstraints maxHeight="31.5" minHeight="30.0" prefHeight="31.5" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-            </rowConstraints>
-        </GridPane>
-    </center>
-   <left>
-        <TextArea id="log" fx:id="log" prefHeight="489.0" prefWidth="200.0" stylesheets="@button.css" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets left="20.0" right="20.0" />
-         </BorderPane.margin></TextArea>
-   </left>
-   <bottom>
-      <Slider fx:id="slider" showTickLabels="true" max="100.0" onMouseDragged="#onMouseDragged" prefHeight="69.0" prefWidth="752.0" value="0.0" BorderPane.alignment="CENTER" />
-   </bottom>
-   <opaqueInsets>
-      <Insets />
-   </opaqueInsets>
-   <cursor>
-      <Cursor fx:constant="DEFAULT" />
-   </cursor>
-</BorderPane>
+            <Button id="button" fx:id="button11" onAction="#saveGame" prefHeight="30.0" prefWidth="134.0" style="-fx-text-fill: white;" stylesheets="@button.css" text="Save Game" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
