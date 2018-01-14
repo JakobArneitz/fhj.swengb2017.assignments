@@ -3,10 +3,12 @@ package at.fhj.swengb.apps.battleship.jfx
 import java.security.acl.Group
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
+import javafx.scene.control.Button
 import javafx.scene.{Parent, Scene}
 import javafx.stage.Stage
 import javafx.scene.media.Media
 import javafx.scene.media.MediaPlayer
+import javafx.scene.text.Font
 
 import at.fhj.swengb.apps.battleship.AlertBox
 
@@ -26,7 +28,9 @@ class BattleShipFxApp extends Application {
 
   /*doing the media player, mp3 in folder*/
 
-  val triedRoot = Try(FXMLLoader.load[Parent](getClass.getResource("/at/fhj/swengb/apps/battleship/jfx/editMode.fxml")))
+  val triedRoot = Try(FXMLLoader.load[Parent](getClass.getResource("/at/fhj/swengb/apps/battleship/jfx/LostScreen.fxml")))
+
+
 
 
 
@@ -57,9 +61,9 @@ class BattleShipFxApp extends Application {
       case Success(root) =>
         stage.setScene(new Scene(root))
         stage.show()
-        stage.setTitle("Es wird Zeit!")
         stage.setResizable(false)//setting title of window to some meaningful message!. //
         mediaPlayer.play()
+        val SixtyFont = Font.loadFont(getClass().getResourceAsStream("/fonts/SIXTY.ttf"), 20);
       case Failure(e) => e.printStackTrace()
     }
   }

@@ -103,6 +103,30 @@
 
 }
 
+#defeatScreen {
+
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: stretch;
+    -fx-border-color: black;
+    -fx-background-image: url('/at/fhj/swengb/apps/battleship/jfx/Defeat.jpg');
+    -fx-text-fill: #263e75;
+
+}
+
+
+
+
+#fonts {
+
+    -fx-font-family: monospace;
+    -fx-font-size : 20 em;
+    -fx-text-fill: white;
+
+}
+
+
+
 
 #slider {
 
