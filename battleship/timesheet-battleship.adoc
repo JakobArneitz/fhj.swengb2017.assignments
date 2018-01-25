@@ -101,6 +101,12 @@
 |3
 |trying to implement different nice looking fonts from the web. Came up with some problems. Doing some research on stackoverflow. Download TTIF and embed in BattleshipFX start method, code written in css – file. should load custom font, font is not applied. After 3 hours of desperation and anger decided to not using some fancy font
 
+|arneitzj15
+|14.01.18
+|8
+|8
+|Class structure, no fleet, huge changes, different style so that it is optimized for future development and our server-client concept multiplayer-mode.
+
 |rinnhofe15
 |14.01.18
 |1
@@ -113,6 +119,85 @@
 |2
 |some major problems turned up, no response of the server when receiving requests via socket io. So I have to change the concept, now no need of OK Messages in the communication between server and client, response from now as as broadcast message (who did what)
 
-|===
+|rinnhofe15
+|14.01.18
+|4
+|8
+|implementing the created concept into our battleship app. From now on server gets started and automatically creates a new client. now the clients communicate with each other via emit messages.
+
+|rinnhofe15
+|15.01.18
+|3
+|8
+|convert function between json and object. Client only knows json, server only object. Difficulties with communication. Helper is needed
+
+
+|arneitzj15
+|15.01.18
+|4
+|5
+|implementing helper. Conversion works. Communication works. Nice
+
+|rinnhofe15
+|16.01.18
+|2
+|2
+|restructuring code, make it look more fancy.
+
+|rinnhofe15
+|17.01.18
+|8
+|7
+| GameController changes. implementing visibility. screen needs to be locked and screen needs to turn white when certain player´s turn. Fields must be invisible. finding a workaround. postponing the new game save game load game functionality for development of multiplayer mode.
+
+|arneitzj15
+18.01.18
+|5
+|4
+| Listener concept, certain states or processes in the game mus be transferred between the two clients, server is interface. Player 1 needs to trust Player 2 with game ship. huge amount of work would be done for central store on server. we decide not to do this.
+
+|arneitzj15
+|18.01.18
+|4
+|4
+|Position now gets to the other player, turn shot or turn water. implemented now other client gets the state. ping pong between player 1 and 2 established.
+
+|wallnerb15
+|18.01.18
+|4
+|4
+|Testing and fixing some minor problems. Concept works. Only be careful when to start instances. no finish placement before player 2 connects. close tab in intellij always. no simple exit windows.
+
+|rinnhofe15
+|19.01.18
+|4
+|15
+|trying to implement load and save concept. came up with hundreds and thousands of problems. Protobuf writing. how to save changes in files when client is leaving game how reconnect. how does he get back all information. impossible for me to implement.
+
+arneitzj15
+|19.01.18
+|1
+|1
+|working on the fxml file for the credit screen, doing some bugfixes.
+
+|rinnhofe15
+|19.01.18
+|2
+|2
+|credit screen link.
+
+|wallnerb15
+|19.01.18
+|2
+|2
+|testing the game, problems with connection between two player on network. changing ip internally in code. turns to work out finally. changed localhost to ip.
+
+|teammeeting
+|20.01.18
+|4
+|4
+|discussing process, problems and goals achieved and discussed further steps to deliver a great project and get the necessary points. 
 
 |===
+|===
+
