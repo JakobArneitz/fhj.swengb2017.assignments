@@ -8,6 +8,6 @@ import org.scalacheck.Gen
   */
 object BattleshipGameGen {
 
-  val battleShipGameGen: Gen[BattleShipGame] = ???
+  val battleShipGameGen: Gen[Game] = ???
 
 }

@@ -5,33 +5,32 @@ package at.fhj.swengb.apps.battleship;
 option java_package         = "at.fhj.swengb.apps.battleship";
 option java_outer_classname = "BattleShipProtobuf";
 
+message Highscore {
+    repeated Game games = 1;
+}
 
-message BattleShipGame {
+message Game {
     Field field = 1;
+    Field enemyField = 2;
 }
 
 message Field {
     int32 width = 1;
     int32 height = 2;
-    repeated Ship ships = 3;
-    repeated Cell cells = 4;
-    repeated Pos steps = 5;
+    repeated Vessel vessels = 3;
+    repeated Pos shoots = 4;
 }
 
-message Ship {
+message Vessel {
     enum Direction {
         VERTICAL = 0;
         HORIZONTAL = 1;
     }
 
     string name = 1;
-    repeated Cell cells = 2;
+    Pos startPos = 2;
     Direction direction = 3;
-}
-
-message Cell {
-    Pos pos = 1;
-    bool shot = 2;
+    int32 size = 4;
 }
 
 message Pos {

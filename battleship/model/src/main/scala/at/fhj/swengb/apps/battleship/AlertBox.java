@@ -23,9 +23,9 @@ public class AlertBox {
     // nice shooting sound for destroying the ship
 
     public static void shoot() {
-        Media cannonshoot = new Media("file:///C:/workspace/fhj.swengb2017.assignments/battleship/jfx/src/main/resources/at/fhj/swengb/apps/battleship/jfx/Cannon+2.mp3");
-        MediaPlayer cannonplay = new MediaPlayer(cannonshoot);
-        cannonplay.play();
+//        Media cannonshoot = new Media("file:///C:/workspace/fhj.swengb2017.assignments/battleship/jfx/src/main/resources/at/fhj/swengb/apps/battleship/jfx/Cannon+2.mp3");
+//        MediaPlayer cannonplay = new MediaPlayer(cannonshoot);
+//        cannonplay.play();
 
     }
 
@@ -33,16 +33,16 @@ public class AlertBox {
 
     public static void sploosh() {
 
-        Media sploosh = new Media("file:///C:/workspace/fhj.swengb2017.assignments/battleship/jfx/src/main/resources/at/fhj/swengb/apps/battleship/jfx/short_heavy_splash.mp3");
-        MediaPlayer splooshie = new MediaPlayer(sploosh);
-        splooshie.play();
+//        Media sploosh = new Media("file:///C:/workspace/fhj.swengb2017.assignments/battleship/jfx/src/main/resources/at/fhj/swengb/apps/battleship/jfx/short_heavy_splash.mp3");
+//        MediaPlayer splooshie = new MediaPlayer(sploosh);
+//        splooshie.play();
 
     }
 
     public static void explode() {
-        Media exploded = new Media("file:///C:/workspace/fhj.swengb2017.assignments/battleship/jfx/src/main/resources/at/fhj/swengb/apps/battleship/jfx/Explosion+8.mp3");
-        MediaPlayer exploding = new MediaPlayer(exploded);
-        exploding.play();
+//        Media exploded = new Media("file:///C:/workspace/fhj.swengb2017.assignments/battleship/jfx/src/main/resources/at/fhj/swengb/apps/battleship/jfx/Explosion+8.mp3");
+//        MediaPlayer exploding = new MediaPlayer(exploded);
+//        exploding.play();
 
     }
 

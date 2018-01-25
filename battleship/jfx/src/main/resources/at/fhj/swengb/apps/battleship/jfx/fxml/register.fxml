@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="enterNameScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/general.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.controllers.RegisterController">
+   <children>
+        <Button onAction="#pressedConfirm" layoutX="212.0" layoutY="254.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" styleClass="button" text="CONFIRM" />
+        <TextField fx:id="enterNameTextField" alignment="CENTER" layoutX="125.0" layoutY="167.0" prefHeight="50.0" prefWidth="370.0" promptText="ENTER YOUR NAME" styleClass="textField" />
+        <Text layoutX="224.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Battleship" />
+        <Text layoutX="327.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-by" text="by VIER" />
+   </children>
+</AnchorPane>

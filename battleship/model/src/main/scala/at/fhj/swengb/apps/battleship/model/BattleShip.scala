@@ -1,41 +1,31 @@
 package at.fhj.swengb.apps.battleship.model
 
-
 object BattleShip {
-  // defines number of occupied battle positions for corresponding vessel
-  val Size = 5
+  val size = 6
 }
 
 object Cruiser {
-  // defines number of occupied battle positions for corresponding vessel
-  val Size = 4
+  val size = 5
 }
 
 object Destroyer {
-  // defines number of occupied battle positions for corresponding vessel
-  val Size = 3
+  val size = 4
 }
 
 object Submarine {
-  // defines number of occupied battle positions for corresponding vessel
-  val Size = 2
+  val size = 3
 }
 
-/**
-  * A battleship has a name and a set of positions.
-  *
-  * Those positions have to be connected. Also they have to be in a straight line, that means
-  * that either all x coordinates are equal or all y coordinates are equal.
-  *
-  * Often it is far easier to use the convenience constructor defined in the companion object to construct
-  * a battleship.
-  *
-  * @param shipName the name of the ship (must be set and not empty)
-  */
-class BattleShip(shipName: String, pos: BattlePos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, BattleShip.Size)
+object Boat {
+  val size = 2
+}
 
-class Cruiser(shipName: String, pos: BattlePos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, Cruiser.Size)
+class BattleShip(shipName: String = "BattleShip", pos: Pos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, BattleShip.size)
 
-class Destroyer(shipName: String, pos: BattlePos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, Destroyer.Size)
+class Cruiser(shipName: String = "Cruiser", pos: Pos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, Cruiser.size)
 
-class Submarine(shipName: String, pos: BattlePos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, Submarine.Size)
+class Destroyer(shipName: String = "Destroyer", pos: Pos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, Destroyer.size)
+
+class Submarine(shipName: String = "Submarine", pos: Pos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, Submarine.size)
+
+class Boat(shipName: String = "Boat", pos: Pos, direction: Direction) extends Vessel(NonEmptyString(shipName), pos, direction, Boat.size)

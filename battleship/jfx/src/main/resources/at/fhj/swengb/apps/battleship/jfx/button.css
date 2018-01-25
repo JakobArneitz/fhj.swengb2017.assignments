@@ -167,7 +167,7 @@ background {
 }
 
 #startupscreen {
-    -fx-background-image:url('startuppicture.jpg');
+    -fx-background-image:url('img/startuppicture.jpg');
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-background-size: cover;

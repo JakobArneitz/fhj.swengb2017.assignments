@@ -39,6 +39,8 @@ lazy val battleShipModel = (project in file("battleship/model/")).
 lazy val battleShipFx = (project in file("battleship/jfx"))
   .settings(commonSettings: _*).
   settings(name := "battleship-jfx",
+    libraryDependencies += "com.corundumstudio.socketio" % "netty-socketio" % "1.7.7",
+    libraryDependencies += "io.socket" % "socket.io-client" % "1.0.0"
   ).dependsOn(battleShipModel)
 
 // ------------------------------------------------------

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="fightbackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="800.0" stylesheets="@button.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxController">    
+<AnchorPane id="fightbackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="800.0" stylesheets="@button.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.controllers.GameController">
    <children>
       <Button id="log" layoutX="161.0" layoutY="110.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="94.0" stylesheets="@button.css" text="LOAD" textFill="WHITE" />
       <Button id="log" layoutX="268.0" layoutY="110.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="94.0" stylesheets="@button.css" text="SAVE" textFill="WHITE" />
